@@ -1,0 +1,10 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}INTRODUCCI\IeC {\'O}N}{3}
+\contentsline {section}{\numberline {2}Preliminares}{4}
+\contentsline {subsection}{\numberline {2.1}Lavado de Activos}{4}
+\contentsline {subsection}{\numberline {2.2}Financiaci\IeC {\'o}n del Terrorismo}{4}
+\contentsline {subsection}{\numberline {2.3}SARLAFT}{5}
+\contentsline {section}{\numberline {3}M\IeC {\'E}TODOS DE CLASIFICACI\IeC {\'O}N}{6}
+\contentsline {subsection}{\numberline {3.1}CLUSTER}{6}
+\contentsline {subsubsection}{\numberline {3.1.1}MEDIDAS DE SIMILARIDAD}{7}
+\contentsline {subsubsection}{\numberline {3.1.2}M\IeC {\'E}TODOS JER\IeC {\'A}RQUICOS DE AN\IeC {\'A}LISIS CLUSTER}{9}

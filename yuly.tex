@@ -1,0 +1,165 @@
+\documentclass[letterpaper,12pt, spanish]{article}
+\usepackage{amsfonts,amsmath,amsthm,amssymb}
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[absolute]{textpos}
+\usepackage{enumerate}
+\usepackage{slashbox}
+\usepackage{multirow}
+\renewcommand{\baselinestretch}{1.4}
+\let\OLDthebibliography=\thebibliography
+\def\thebibliography#1{\OLDthebibliography{#1}%
+\addcontentsline{toc}{section}{\refname}}
+
+\begin{document}
+\setcounter{page}{1}
+\newpage{\pagestyle{empty}\cleardoublepage}
+\title{MÉTODOS DE CLASIFICACIÓN PARA LA SEGMENTACIÓN – SARLAFT}
+\author{Yuly Andrea Lizarralde}
+\date{}
+\maketitle
+\ \\
+\newpage{\pagestyle{empty}\cleardoublepage}
+\tableofcontents{}
+\newpage{\pagestyle{empty}\cleardoublepage}
+\section{INTRODUCCIÓN}
+\ \\
+HSDHSGDHAGD
+\ \\
+\ \\
+El objetivo de este trabajo es hacer uso de la teoría de métodos de clasificación para  realizar un modelo aplicado a la gestión de riesgo que permita efectuar la segmentación de clientes vinculados a una entidad financiera.  Esto tomando en cuenta que la Superintendencia Financiera de Colombia considera que los clientes o usuarios son unos de los agentes generadores del riego de lavado de activos y financiación del terrorismo (en adelante LA/FT). La segmentación, según se define en la circular externa 022 del 2007, es el proceso por medio del cual se lleva a cabo la separación de elementos en grupos homogéneos al interior de ellos y heterogéneos entre ellos. La separación se fundamenta en el reconocimiento de diferencias significativas en sus características (variables de segmentación).  Las variables de segmentación que se tendrán en cuenta para los clientes son: actividad económica, volumen o frecuencia de sus transacciones, monto de ingresos y egresos y patrimonio, etc.
+\ \\
+\ \\
+Para iniciar veremos las definiciones de lavado de activos y financiación del terrorismo que se encuentran estipuladas en la ley colombiana, que es SARLAFT y que deben hacer las entidades vigiladas para implementarlo.  Después se darán las definiciones pertinentes sobre los principales métodos de clasificación y se intentará mostrar de que manera se puede aplicar la teoría de un método de clasificación seleccionado a la segmentación de clientes que deben efectuar las entidades vigiladas por la superintendencia financiera para identificar el riesgo de LA/FT
+
+
+
+\section{Preliminares}
+\subsection{Lavado de Activos}
+
+Lavar activos es tratar de dar apariencia de legalidad a recursos de origen ilícito y constituye un serio problema en nuestro país, principalmente por que se encuentra ligado a actividades delictivas como el narcotráfico, tráfico de migrantes, trata de personas, extorsión, enriquecimiento ilícito, secuestro, tráfico de armas, corrupción y delitos contra el sistema financiero.
+\ \\
+\ \\
+El artículo 323 del  código penal define el delito de lavado de activos así:
+\ \\
+\textit{el que adquiera, resguarde, invierta, transporte, transforme, custodie o administre bienes que tengan su origen mediato o inmediato en actividades de tráfico de migrantes, trata de personas, extorsión, enriquecimiento ilícito, secuestro extorsivo, rebelión, tráfico de armas, financiación del terrorismo y administración de recursos relacionados con actividades terroristas, tráfico de drogas tóxicas, estupefacientes o sustancias sicotrópicas, delitos contra el sistema financiero, delitos contra la administración pública, o vinculados con el producto de delitos ejecutados bajo concierto para delinquir, o les dé a los bienes provenientes de dichas actividades apariencia de legalidad o los legalice, oculte o encubra la verdadera naturaleza, origen, ubicación, destino, movimiento o derecho sobre tales bienes o realice cualquier otro acto para ocultar o encubrir su origen ilícito. (art.323, ley 599 del 2000)}
+
+\subsection{Financiación del Terrorismo}
+
+En Colombia es un delito financiar el terrorismo o administrar recursos relacionados con actividades terroristas.
+\ \\
+\ \\
+Se entiende por financiación del terrorismo: \emph{El que directa o indirectamente provea, recolecte, entregue, reciba, administre, aporte, custodie o guarde fondos, bienes o recursos, o realice cualquier otro acto que promueva, organice, apoye, mantenga, financie o sostenga económicamente a grupos armados al margen de la ley o a sus integrantes, o a grupos terroristas nacionales o extranjeros, o a terroristas nacionales o extranjeros, o a actividades terroristas. (art. 345, ley 599 del 2000)}.
+\ \\
+\ \\
+A diferencia del lavado de activos, en la financiación del terrorismo el orígen de los recursos puede ser lícito
+\subsection{SARLAFT}
+
+Es el sistema de administración que deben implementar las entidades vigiladas por la Superintendencia Financiera de Colombia para protegerse frente al riesgo de LA/FT y se instrumenta a través de las etapas y elementos que lo integran. (Norma 022 de SuperFinanciera de Colombia)
+
+\ \\
+Según la Superintendencia Financiera de Colombia para identificar el riesgo de LA/FT las entidades vigiladas deben como mínimo:
+\begin{enumerate}
+  \item Establecer las metodologías para la segmentación de los factores de riesgo.
+  \item Con base en las metodologías establecidas, segmentar los factores de riesgo.
+  \item Establecer las metodologías para la identificación del riesgo de LA/FT y sus riesgos asociados respecto de cada uno de los factores de riesgo.
+  \item Con base en las metodologías establecidas en desarrollo del literal anterior, identificar las formas a
+      través de las cuales se puede presentar el riesgo de LA/FT.
+\end{enumerate}
+\ \\
+Clientes o Usuarios representan uno de los factores de riesgo que para los efectos del SARLAFT deben tener en cuenta las entidades vigiladas. Según la Superintendencia Financiera de Colombia, el cliente es toda persona natural o jurídica con la cuál la entidad establece y mantiene una relación contractual o legal para el suministro de cualquier producto propio de su actividad.
+\ \\
+\ \\
+Tomando esto en consideración, es el propósito de este trabajo exponer una metodología para la segmentación de clientes haciendo uso de la teoría de métodos de clasificación.
+
+\section{MÉTODOS DE CLASIFICACIÓN}
+
+Escribir resumen sobre los métodos de clasificación y minería de datos
+
+
+\subsection{CLUSTER}
+
+Cluster es un conjunto de objetos que poseen características similares.  El análisis cluster busca particionar un conjunto de objetos en grupos, de tal forma que los objetos de un mismo grupo sean similares y los objetos de grupos diferentes sean disímiles.         
+\ \\
+\ \\
+\subsubsection{MEDIDAS DE SIMILARIDAD}
+
+Reconocer objetos como similares o disimiles es lo más importante para el proceso de clasificación.  Cuando contamos con aspectos cuantitativos, este aspecto de similaridad se encuentra ligado al concepto de métrica o medidas de distancia y cuando contamos con aspectos cualitativos, hablamos de coeficientes de asociación, que se usan para datos en escala nominal.
+\ \\
+Las medidas de similaridad usadas con más frecuencia son: 
+\begin{enumerate}
+\item Medidas de distancia
+\item Coeficientes de correlación 
+\item Coeficientes de asociación
+\item Coeficientes de probabilidad
+\end{enumerate}
+
+\subsubsection*{Medidas de distancia}
+
+Las medidas de distancia de uso más frecuente son:
+
+\begin{enumerate}
+\item Distancia euclidiana definida por
+$$d_{ij} = \sqrt{\sum \limits_{k=1}^{p} (X_{ik}-X_{	jk})^2}$$
+\item Distancia Manhattan o distancia por cuadras. Se define por:
+$$d_{ij} = \sum \limits_{k=1}^{p} \vert X_{ik}-X_{jk} \vert$$
+\item Distancia de Chebychev.  Calcula la discrepancia más grande en alguna de las dimensiones
+$$d_{ij} = Max_{k=1...p} \vert X_{ik}-X_{jk} \vert$$
+\end{enumerate}
+
+\subsubsection*{Coeficientes de correlación}
+
+Usamos el coeficiente de correlación para examinar el grado de similitud que hay entre dos variables numéricas.  El coeficiente de correlación $r$, es un valor real entre $-1$ y $1$.  Si $r=1$ las variables están perfectamente correlacionadas, si $r=-1$ la correlación es negativa y si $r=0$ entonces no hay correlación.  Es decir que cuando $r$ es positivo, las variables tienen un comportamiento similar, ambas crecen o decrecen al mismo tiempo.  Y cuando $r$ es negativo si una variable crece la otra decrece. 
+
+El más conocido es el coeficiente de correlación de Pearson, el cual determina el grado de de correlación o asociación lineal entre casos.  Esta definido por:
+
+$$r_{jk}=\dfrac{\sum \limits_{i}(X_{ij}-\overline{X}_{j})(X_{ik}-\overline{X}_{k})}{\sqrt{\sum \limits_{i}(X_{ij}-\overline{X}_{j})^2} \sqrt{\sum \limits_{i}(X_{ik}-\overline{X}_{k})^2}}$$ con $$i= 1,...,p$$
+\ \\
+Donde $X_{ij}$ es el valor de la variable $i$ para el caso $j$, y $\overline{X}_j$ es la media de todas las variables que definen el caso $j$.  
+
+
+
+\subsubsection*{Coeficientes de asociación}
+
+Se usan principalmente cuando tenemos datos en escala nominal.  Cada variable toma los valores de 0 (ausencia) y 1 (presencia) de un atributo.
+ 
+ \subsubsection*{Coeficientes de probabilidad}
+ 
+ BUSCAR TEORÍA
+ \subsubsection{MÉTODOS JERÁRQUICOS DE ANÁLISIS CLUSTER}
+ Los métodos jerárquicos se dividen en aglomerativos y disociativos.  Los métodos aglomerativos comienzan el análisis con tantos grupos como individuos haya.  A partir de estos datos iniciales se van formando grupos, de forma ascendente, hasta que al final del proceso todos los casos tratados quedan en un mismo grupo.
+ \ \\
+ Los métodos disociativos, constituyen el proceso inverso al anterior.  Comienzan con un cluster que contiene todos los casos tratados y a partir de este grupo inicial, a través de varias divisiones, se van formando grupos cada vez más pequeños.  Al final del proceso se tienen tantos grupos como casos. 
+ \ \\
+ \ \\
+ A continuación vamos a presentar algunos métodos jerárquicos aglomerativos.
+ 
+ \subsubsection*{Método de la distancia mínima}
+ 
+ En este método se considera que la distancia o similitud entre dos clusters viene dada por la mínima distancia (o máxima similitud) entre sus componentes.
+ \ \\
+ Así, tras efectuar la etapa k-ésima, tenemos ya formados $n-k$ clusters, la distancia entre los clusters $C_{i}$ (con $n_{i}$ elementos) y $C_{j}$ (con $n_{j}$ elementos) sería:
+ 
+$$d(C_{i},C_{j})= \min_{\substack {x_{l}\in C_{i}\\ x_{m}\in C_{j}}}\{d(x_{l},x_{m})\} \,\,\,\,\,\,\,\,\,\, l=1,...,n_{i}; m=1,...,n_{j}$$   
+ 
+En el nivel $k+1$ se unirán los clusters $C_{i}$ y $C_{j}$ si	
+$$d(C_{i},C_{j})= \min_{\substack {i_{1},j_{1}=1,...,n-k\\ i_{1}\neq j_{1}}} \{d(C_{i_{1}},C_{j_{1}})\}=$$
+$$=\min_{\substack{i_{1},j_{1}=1,...,n-k\\ i_{1}\neq j_{1}}} \left\{\min_{\substack{x_{l}\in C_{i_{1}}\\ x_{m}\in C_{j_{1}}}} \{d(x_{l},x_{m})\}\right\} \,\,\,\,\,\,\, l=1,...,n_{i_{1}}; m=1,...,n_{j_{1}}$$
+
+%\newpage{\pagestyle{empty}\cleardoublepage}
+%\renewcommand{\refname}{BIBLIOGRAFÍA}
+%\begin{thebibliography}{4}
+%\bibitem{Hilera} HILERA,J.,MARTINEZ,V. {\it Redes Neuronales Artificiales Fundamentos,Modelos y Aplicaciones}, Alfaomega Grupo Editor S.A., 2000
+%\bibitem{caicedo} CAICEDO,E., LOPEZ,J. {\it Una aproximación práctica a las redes neuronales artificiales}, Programa Editorial Universidad Del Valle, 2009.
+%\bibitem{MIAU}
+%\bibitem{Otra}
+%\end{thebibliography}
+\end{document}
+
+
+
+
+
+
+
+
