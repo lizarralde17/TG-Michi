@@ -1,0 +1,85 @@
+\chapter{Teoría}
+\label{chap:teoria}
+Escribir resumen sobre los métodos de clasificación y minería de datos
+
+\section{Algoritmos de \textit{Clustering}}
+
+Un \textit{cluster} es un conjunto de objetos que poseen características similares.  El análisis cluster busca particionar un conjunto de objetos en grupos, de tal forma que los objetos de un mismo grupo sean similares y los objetos de grupos diferentes sean disímiles.   
+
+\subsubsection{Medidas De Similaridad}
+
+Reconocer objetos como similares o disimiles es lo más importante para el proceso de clasificación.  Cuando contamos con aspectos cuantitativos, este aspecto de similaridad se encuentra ligado al concepto de métrica o medidas de distancia y cuando contamos con aspectos cualitativos, hablamos de coeficientes de asociación, que se usan para datos en escala nominal.
+\ \\
+Las medidas de similaridad usadas con más frecuencia son: 
+\begin{enumerate}
+\item Medidas de distancia
+\item Coeficientes de correlación 
+\item Coeficientes de asociación
+\item Coeficientes de probabilidad
+\end{enumerate}
+
+\subsubsection*{Medidas De Distancia}
+
+Las medidas de distancia de uso más frecuente son:
+
+\begin{enumerate}
+\item Distancia euclidiana definida por
+$$d_{ij} = \sqrt{\sum \limits_{k=1}^{p} (X_{ik}-X_{	jk})^2}$$
+\item Distancia Manhattan o distancia por cuadras. Se define por:
+$$d_{ij} = \sum \limits_{k=1}^{p} \vert X_{ik}-X_{jk} \vert$$
+\item Distancia de Chebychev.  Calcula la discrepancia más grande en alguna de las dimensiones
+$$d_{ij} = Max_{k=1...p} \vert X_{ik}-X_{jk} \vert$$
+\end{enumerate}
+
+\subsubsection*{Coeficientes De Correlación}
+
+Usamos el coeficiente de correlación para examinar el grado de similitud que hay entre dos variables numéricas.  El coeficiente de correlación $r$, es un valor real entre $-1$ y $1$.  Si $r=1$ las variables están perfectamente correlacionadas, si $r=-1$ la correlación es negativa y si $r=0$ entonces no hay correlación.  Es decir que cuando $r$ es positivo, las variables tienen un comportamiento similar, ambas crecen o decrecen al mismo tiempo.  Y cuando $r$ es negativo si una variable crece la otra decrece. 
+
+El más conocido es el coeficiente de correlación de Pearson, el cual determina el grado de de correlación o asociación lineal entre casos.  Esta definido por:
+
+$$r_{jk}=\dfrac{\sum \limits_{i}(X_{ij}-\overline{X}_{j})(X_{ik}-\overline{X}_{k})}{\sqrt{\sum \limits_{i}(X_{ij}-\overline{X}_{j})^2} \sqrt{\sum \limits_{i}(X_{ik}-\overline{X}_{k})^2}}$$ con $$i= 1,\cdots,p$$
+\ \\
+Donde $X_{ij}$ es el valor de la variable $i$ para el caso $j$, y $\overline{X}_j$ es la media de todas las variables que definen el caso $j$.  
+
+
+
+\subsubsection*{Coeficientes De Asociación}
+
+Se usan principalmente cuando tenemos datos en escala nominal.  Cada variable toma los valores de 0 (ausencia) y 1 (presencia) de un atributo.
+ 
+ \subsubsection*{Coeficientes De Probabilidad}
+ 
+ \subsubsection{Métodos Jerárquicos De Análisis Cluster}
+
+ Los métodos jerárquicos se dividen en aglomerativos y disociativos.  Los métodos aglomerativos comienzan el análisis con tantos grupos como individuos haya.  A partir de estos datos iniciales se van formando grupos, de forma ascendente, hasta que al final del proceso todos los casos tratados quedan en un mismo grupo.\par
+
+ Los métodos disociativos, constituyen el proceso inverso al anterior.  Comienzan con un cluster que contiene todos los casos tratados y a partir de este grupo inicial, a través de varias divisiones, se van formando grupos cada vez más pequeños.  Al final del proceso se tienen tantos grupos como casos. \par 
+
+ A continuación vamos a presentar algunos métodos jerárquicos aglomerativos.
+ 
+ \subsubsection*{Método De La Distancia Mínima}
+ 
+ En este método se considera que la distancia o similitud entre dos clusters viene dada por la mínima distancia (o máxima similitud) entre sus componentes.
+ \ \\
+ Así, tras efectuar la etapa k-ésima, tenemos ya formados $n-k$ clusters, la distancia entre los clusters $C_{i}$ (con $n_{i}$ elementos) y $C_{j}$ (con $n_{j}$ elementos) sería:
+ 
+$$d(C_{i},C_{j})= \min_{\substack {x_{l}\in C_{i}\\ x_{m}\in C_{j}}}\{d(x_{l},x_{m})\} \,\,\,\,\,\,\,\,\,\, l=1,\cdots,n_{i}; m=1,\cdots,n_{j}$$   
+ 
+En el nivel $k+1$ se unirán los clusters $C_{i}$ y $C_{j}$ si	
+$$d(C_{i},C_{j})= \min_{\substack {i_{1},j_{1}=1,...,n-k\\ i_{1}\neq j_{1}}} \{d(C_{i_{1}},C_{j_{1}})\}=$$
+$$=\min_{\substack{i_{1},j_{1}=1,\cdots,n-k\\ i_{1}\neq j_{1}}} \left\{\min_{\substack{x_{l}\in C_{i_{1}}\\ x_{m}\in C_{j_{1}}}} \{d(x_{l},x_{m})\}\right\} \,\,\,\,\,\,\, l=1,\cdots,n_{i_{1}}; m=1,\cdots,n_{j_{1}}$$
+
+
+
+\subsection{Algoritmo K-Means}
+
+...
+
+\subsubsection{Métodos Jerárquicos}
+
+...
+
+
+\subsection{Árboles de Decicisón}
+
+...
