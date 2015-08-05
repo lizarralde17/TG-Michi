@@ -1,0 +1,125 @@
+% \usepackage{polyglossia}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+% \usepackage[absolute]{textpos}
+\usepackage{enumerate}
+% \usepackage{slashbox}
+\usepackage{multirow}
+% \renewcommand{\baselinestretch}{1.4}
+% \let\OLDthebibliography=\thebibliography
+% \def\thebibliography#1{\OLDthebibliography{#1}%
+% \addcontentsline{toc}{section}{\refname}}
+
+% \setmainlanguage[variant=usmax]{english}
+% \setotherlanguage{spanish}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\let\equation\gather
+\let\endequation\endgather
+
+\usepackage{enumitem}
+\usepackage{epigraph}
+
+\setlength{\epigraphrule}{0pt}
+\setlength{\epigraphwidth}{0.55\textwidth}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{
+  \ifnum\value{chapter}>0
+    \markboth{\thechapter.\ #1}{}
+  \else
+    \markboth{#1}{}
+  \fi
+}
+
+\fancyhead{}
+\fancyhead[ER]{\textsl{\nouppercase{\leftmark}}}
+\fancyhead[OL]{\textsl{\nouppercase{\rightmark}}}
+
+\fancyhead[LE,RO]{\thepage}
+
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\clearemptydoublepage}{\clearpage{\pagestyle{empty}\cleardoublepage}}
+
+% % \usepackage{fontspec}
+
+% \usepackage{subcaption}
+
+% \usepackage{unicode-math}
+
+% \setmathfont{latinmodern-math.otf}
+
+% \setmathfont[range={\llparenthesis,\rrparenthesis}]{xits-math.otf}
+
+% \setmonofont
+%   [ BoldFont       = DejaVuSansMono-Bold.ttf,
+%     ItalicFont     = DejaVuSansMono-Oblique.ttf,
+%     BoldItalicFont = DejaVuSansMono-BoldOblique.ttf,
+%     Scale          = MatchLowercase,
+%   ]
+%   {DejaVuSansMono.ttf}
+
+% \usepackage{xltxtra}
+% \usepackage{xunicode}
+
+% \usepackage{xspace}
+
+% \usepackage{tikz}
+% \tikzset{node distance=2.5cm,auto}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% biblatex
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage[style=authoryear,backref=true]{biblatex}
+% \usepackage[english=american]{csquotes}
+
+% \SetCiteCommand{\parencite}
+
+% \DeclareFieldFormat[article]{title}{#1}
+% \DeclareFieldFormat[inbook]{title}{#1}
+% \DeclareFieldFormat[inproceedings]{title}{#1}
+% \DeclareFieldFormat[thesis]{title}{#1}
+
+% \renewcommand{\subtitlepunct}{\ifterm{}{\addcolon}\addspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks=true}
+\hypersetup{linktocpage=true}
+
+\definecolor{citecolor}{rgb}{0,0.7,0}
+\definecolor{linkcolor}{rgb}{0.7,0,0}
+\definecolor{urlcolor}{rgb}{0,0,0.7}
+
+\hypersetup{citecolor=citecolor}
+\hypersetup{linkcolor=linkcolor}
+\hypersetup{urlcolor=urlcolor}
+
+
+% \ifcolor
+% \else
+%   \hypersetup{hidelinks}
+% \fi
+
+\hypersetup{pdftitle={M\'etodos De Clasificaci\'on Para La Segmentaci\'on \\ SARLAFT}}
+\hypersetup{pdfauthor={Yuly Andrea Lizarralde}}
+\hypersetup{pdfkeywords={sarlaft}}
+\hypersetup{pdfsubject={Monografía de Pregrado en Matemáticas}}
+
+
