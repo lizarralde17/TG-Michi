@@ -74,7 +74,7 @@ Tomando esto en consideración, es el propósito de este trabajo exponer una met
 
 \section{MÉTODOS DE CLASIFICACIÓN}
 
-
+Escribir resumen sobre los métodos de clasificación y minería de datos
 
 
 \subsection{CLUSTER}
@@ -145,7 +145,15 @@ $$d(C_{i},C_{j})= \min_{\substack {x_{l}\in C_{i}\\ x_{m}\in C_{j}}}\{d(x_{l},x_
 En el nivel $k+1$ se unirán los clusters $C_{i}$ y $C_{j}$ si	
 $$d(C_{i},C_{j})= \min_{\substack {i_{1},j_{1}=1,...,n-k\\ i_{1}\neq j_{1}}} \{d(C_{i_{1}},C_{j_{1}})\}=$$
 $$=\min_{\substack{i_{1},j_{1}=1,...,n-k\\ i_{1}\neq j_{1}}} \left\{\min_{\substack{x_{l}\in C_{i_{1}}\\ x_{m}\in C_{j_{1}}}} \{d(x_{l},x_{m})\}\right\} \,\,\,\,\,\,\, l=1,...,n_{i_{1}}; m=1,...,n_{j_{1}}$$
+\ \\
+\subsubsection*{Método de la distancia máxima}
 
+En este método se considera que la distancia o similitud entre dos clusters hay que medirla atendiendo a sus elementos más dispares, es decir la distancia entre dos clusters viene dada por la máxima distancia entre sus componentes.  Así, en la etapa k-ésima ya tenemos $n-k$ clusters, la distancia entre los clusters $C_{i}$ y $C_{j}$ (con $n_{i}$ y $n_{j}$ elementos respectivamente), serán:
+$$d(C_{i}, C_{j})=\max_{\substack{x_{l}\in C_{i}\\ x_{m}\in C_{j}}} \{d(x_{l}, x_{m})\} \,\,\,\,\,\,\,\,\,\, l=1,...,n_{i}; m=1,...,n_{j}$$
+
+En el nivel $k+1$ se unirán los clusters $C_{i}$ y $C_{j}$ si 
+$$d(C_{i},C_{j})= \min_{\substack {i_{1},j_{1}=1,...,n-k\\ i_{1}\neq j_{1}}} \{d(C_{i_{1}},C_{j_{1}})\}=$$
+$$=\min_{\substack{i_{1},j_{1}=1,...,n-k\\ i_{1}\neq j_{1}}} \left\{\max_{\substack{x_{l}\in C_{i_{1}}\\ x_{m}\in C_{j_{1}}}} \{d(x_{l},x_{m})\}\right\} \,\,\,\,\,\,\, l=1,...,n_{i_{1}}; m=1,...,n_{j_{1}}$$
 %\newpage{\pagestyle{empty}\cleardoublepage}
 %\renewcommand{\refname}{BIBLIOGRAFÍA}
 %\begin{thebibliography}{4}
