@@ -1,0 +1,27 @@
+\select@language {english}
+\contentsline {chapter}{Acknowledgements}{iii}{chapter*.1}
+\contentsline {chapter}{Abstract}{v}{chapter*.2}
+\contentsline {chapter}{Contents}{vii}{section*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Preliminaries}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Money Laundering }{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Terrorist Financing Sources}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}SARLAFT}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}Warning Signs}{5}{section.2.4}
+\contentsline {section}{\numberline {2.5}Segmentation}{6}{section.2.5}
+\contentsline {chapter}{\numberline {3}Theory}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Clustering}{7}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}\textit {Distance Measures}}{9}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}K-means}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}Decision Tree}{11}{section.3.3}
+\contentsline {chapter}{\numberline {4}Problem Statement}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Problem}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Implementation}{17}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Decision trees}{18}{subsection.4.2.1}
+\contentsline {subsubsection}{Alerts determination}{20}{section*.6}
+\contentsline {subsection}{\numberline {4.2.2}K-Means Algorithm}{23}{subsection.4.2.2}
+\contentsline {subsubsection}{Alerts determination}{25}{section*.7}
+\contentsline {chapter}{\numberline {5}Results}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Decision trees}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}K-Means Algorithm}{37}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusions}{39}{chapter.6}

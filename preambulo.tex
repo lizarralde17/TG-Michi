@@ -1,7 +1,8 @@
 % \usepackage{polyglossia}
-
-\usepackage[spanish]{babel}
+\usepackage{mathptmx}
+\usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
+
 % \usepackage[absolute]{textpos}
 \usepackage{enumerate}
 % \usepackage{slashbox}
@@ -103,13 +104,13 @@
 \hypersetup{colorlinks=true}
 \hypersetup{linktocpage=true}
 
-\definecolor{citecolor}{rgb}{0,0.7,0}
-\definecolor{linkcolor}{rgb}{0.7,0,0}
-\definecolor{urlcolor}{rgb}{0,0,0.7}
+% \definecolor{citecolor}{rgb}{0,0.7,0}
+% \definecolor{linkcolor}{rgb}{0.7,0,0}
+% \definecolor{urlcolor}{rgb}{0,0,0.7}
 
-\hypersetup{citecolor=citecolor}
-\hypersetup{linkcolor=linkcolor}
-\hypersetup{urlcolor=urlcolor}
+\hypersetup{citecolor=green}
+\hypersetup{linkcolor=blue}
+\hypersetup{urlcolor=blue}
 
 
 % \ifcolor
@@ -117,9 +118,18 @@
 %   \hypersetup{hidelinks}
 % \fi
 
-\hypersetup{pdftitle={M\'etodos De Clasificaci\'on Para La Segmentaci\'on \\ SARLAFT}}
+\hypersetup{pdftitle={Classification Methods for SARLAFT Segmentation}}
 \hypersetup{pdfauthor={Yuly Andrea Lizarralde}}
 \hypersetup{pdfkeywords={sarlaft}}
-\hypersetup{pdfsubject={Monografía de Pregrado en Matemáticas}}
+\hypersetup{pdfsubject={Undergraduate Thesis}}
+\usepackage{setspace}
 
 
+\usepackage{float}
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\@makechapterhead}{\huge}{\large}{}{}% for \chapter
+\patchcmd{\@makechapterhead}{\Huge}{\large}{}{}% for \chapter
+\patchcmd{\@makeschapterhead}{\Huge}{\large}{}{}% for \chapter*
+\makeatother
