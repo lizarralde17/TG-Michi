@@ -28,8 +28,8 @@
 \setlength{\epigraphrule}{0pt}
 \setlength{\epigraphwidth}{0.55\textwidth}
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
 
 \renewcommand{\chaptermark}[1]{
   \ifnum\value{chapter}>0
@@ -39,18 +39,18 @@
   \fi
 }
 
-\fancyhead{}
-\fancyhead[ER]{\textsl{\nouppercase{\leftmark}}}
-\fancyhead[OL]{\textsl{\nouppercase{\rightmark}}}
+% \fancyhead{}
+% \fancyhead[ER]{\textsl{\nouppercase{\leftmark}}}
+% \fancyhead[OL]{\textsl{\nouppercase{\rightmark}}}
 
-\fancyhead[LE,RO]{\thepage}
+% \fancyhead[LE,RO]{\thepage}
 
-\fancyfoot{}
+% \fancyfoot{}
 
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
 
-\newcommand{\clearemptydoublepage}{\clearpage{\pagestyle{empty}\cleardoublepage}}
+% \newcommand{ }{\clearpage{\pagestyle{empty}\cleardoublepage}}
 
 % % \usepackage{fontspec}
 
@@ -117,7 +117,7 @@
 % \else
 %   \hypersetup{hidelinks}
 % \fi
-
+\usepackage[document]{ragged2e}
 \hypersetup{pdftitle={Classification Methods for SARLAFT Segmentation}}
 \hypersetup{pdfauthor={Yuly Andrea Lizarralde}}
 \hypersetup{pdfkeywords={sarlaft}}
@@ -126,10 +126,22 @@
 
 
 \usepackage{float}
-\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
-\makeatletter
-% \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
-\patchcmd{\@makechapterhead}{\huge}{\large}{}{}% for \chapter
-\patchcmd{\@makechapterhead}{\Huge}{\large}{}{}% for \chapter
-\patchcmd{\@makeschapterhead}{\Huge}{\large}{}{}% for \chapter*
-\makeatother
+% \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+% \makeatletter
+% % \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+% \patchcmd{\@makechapterhead}{\huge}{\normalsize}{}{}% for \chapter
+% \patchcmd{\@makechapterhead}{\Huge}{\normalsize}{}{}% for \chapter
+% \patchcmd{\@makeschapterhead}{\Huge}{\normalsize}{}{}% for \chapter*\tabularnewline
+
+% \makeatother
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\normalsize\bfseries}
+  {\chaptertitlename\ \thechapter}{12pt}{\normalsize}
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}
+  {\thesection}{1em}{}
+
+\pagestyle{plain}
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
